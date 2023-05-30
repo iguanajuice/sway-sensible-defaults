@@ -16,6 +16,7 @@ A better default config for sway. Minimally riced and includes most basic to int
 - Put monitors to sleep when locked to save power
 - Basic [waybar](https://github.com/Alexays/Waybar) config with persistent workspaces and app launchers for common programs
 - Graphical shutdown/restart/logout prompt [(nwg-bar)](https://github.com/nwg-piotr/nwg-bar)
+- Plus a few other tweaks and fixes
 
 To install, run:
 - `install/arch.sh` if you are using Arch/Manjaro/Garuda/EndeavourOS
