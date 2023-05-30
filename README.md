@@ -24,4 +24,6 @@ To install, run:
 - `install/fedora.sh` if you are using Fedora/Nobara
 
 **WARNING:** This will overwrite any existing config for sway, waybar, and foot.
-Make sure to back them up if you still need them. 
+Make sure to back them up if you still need them.
+
+Once in sway, please press Ctrl+Super+C and read through the config.
