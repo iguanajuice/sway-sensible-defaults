@@ -17,10 +17,6 @@ A better default config for sway. Minimally riced and includes most basic to int
 - Basic [waybar](https://github.com/Alexays/Waybar) config with persistent workspaces and app launchers for common programs
 - Graphical shutdown/restart/logout prompt [(nwg-bar)](https://github.com/nwg-piotr/nwg-bar)
 
-The main purpose of these dotfiles is to be used as a baseline configuration for sway,
-**especially for new users**; so more time can be spent tweaking its appearance rather then
-having to manually add in common functionality. So feel free to rice to your liking!
-
 To install, run:
 - `install/arch.sh` if you are using Arch/Manjaro/Garuda/EndeavourOS
 - `install/debian.sh` if you are using Debian/Ubuntu/Mint/Pop_OS
