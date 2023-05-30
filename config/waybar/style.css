@@ -1,0 +1,74 @@
+* {
+    font-family: SourceCodePro;
+    font-size: 12;
+}
+
+#waybar {
+    background-color: alpha(black, 1);
+}
+
+button {
+	border: none;
+}
+
+#workspaces button,
+#mode,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#tray,
+#custom-logout {
+    color: white;
+    border-radius: 0;
+    padding: 0 12;
+}
+
+#custom-L0,
+#custom-L1,
+#custom-L2,
+#custom-L3,
+#custom-L4,
+#custom-L5,
+#custom-L6,
+#custom-L7,
+#custom-L8,
+#custom-L9,
+#custom-bar {
+	font-weight: bold;
+	color: white;
+	padding: 0 12;
+}
+
+#workspaces button {
+	background: alpha(white, 0.12);
+	padding: 0 4;
+}
+
+#workspaces button.visible {
+	font-weight: bold;
+}
+
+#workspaces button.urgent {
+    background: #900000;
+}
+
+#workspaces button.persistent {
+	background: transparent;
+}
+
+#clock {
+	font-size: 13;
+}
+
+#battery.good {
+	color: green;
+}
+
+#battery.warning:not(.charging) {
+	color: yellow;
+}
+
+#battery.critical:not(.charging) {
+	color: red;
+}

@@ -1,0 +1,82 @@
+{
+	//"position": "bottom",
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "custom/L0", "custom/L1", "custom/L2", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "tray", "custom/bar"],
+
+	"sway/workspaces": {
+		"disable-scroll-wraparound": true,
+		"on-click": "activate",
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": []
+		}
+	},
+	"custom/L0": {
+		"format": "Files",
+		"on-click": "xdg-open ~",
+		"on-click-middle": "xdg-open /",
+		"tooltip": false
+	},
+	"custom/L1": {
+		"format": "Browser",
+		"on-click": "xdg-open http:",
+		"on-click-middle": "firefox --private-window",
+		"tooltip": false
+	},
+	"custom/L2": {
+		"format": "Games",
+		"on-click": "steam",
+		"on-click-middle": "heroic",
+		"on-click-right": "lutris",
+		"tooltip": false
+	},
+	"sway/mode": {
+        "format": ""
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "on-click": "gnome-calendar",
+        "tooltip-format": "{:%A %B, %d, %Y}"
+    },
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{capacity}%",
+        "format-alt": "{time}"
+    },
+	"pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "Vol: {volume}%",
+        "format-muted": "MUTED",
+        "on-click": "pavucontrol",
+        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "Wired",
+        "format-disconnected": "Disconnected",
+        "on-click": "nm-connection-editor",
+        "tooltip": false
+    },
+	"tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+	"custom/bar": {
+		"exec": "whoami",
+		"on-click": "~/.config/sway/bin/nwg-bar",
+		"on-click-middle": "gnome-system-monitor",
+		"on-click-right": "makoctl restore",
+		"tooltip": false
+	}
+}

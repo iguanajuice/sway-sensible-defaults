@@ -1,0 +1,299 @@
+# A sane default config for sway
+
+### Variables -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+# Modifier key (Use Mod1 for Alt and Mod4 for Super/Windows key)
+set $mod Mod4
+
+# Modifier key used to move and resize windows
+floating_modifier Mod1 normal
+
+# Colors (applies to notifications and app launcher)
+set $focus_fg ffffffff
+set $focus_bg 242424ff
+set $unfocus_fg aaaaaaff
+set $unfocus_bg 121212fd
+
+# Font size and style
+# Terminal font can be changed at ~/.config/foot/foot.ini
+# The top bar's font can be changed at ~/.config/waybar/style.css
+# Application font can be changed using `gnome-tweaks`
+# Packges `qgnomeplatform-qt5` and `qgnomeplatform-qt6` should also be installed
+set $font SourceCodePro
+set $title_font 9
+set $notif_font 10
+set $menu_font 11
+
+# Set display scaling factor (increase for hi-dpi displays)
+output * scale 1
+
+# Monitor output variables (Use command `swaymsg -t get_outputs` for monitor info)
+# Uncomment and edit these to match your setup
+#set $monL HDMI-A-2
+#set $monR DP-1
+#set $PRIMARY_MON $monR
+
+# Your preferred terminal emulator
+# Note that you may also need to set the prefered terminal for your file manager
+# You can set it in nemo using the command below
+# gsettings set org.cinnamon.desktop.default-applications.terminal exec foot
+set $term foot
+
+# Your prefered text editor
+set $txt $term -T 'micro' micro
+
+# Other default apps (such as web browsers and file managers) can be changed
+# by editing `~/.config/mimeapps.list`
+
+# Application launcher
+set $_menu fuzzel
+set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg \
+    -w 64 -s $focus_bg -S $focus_fg -m $focus_fg -M ffff00ff -B 0 -r 0 -ID no
+
+# Set environment variables
+exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec export QT_QPA_PLATFORMTHEME=gnome
+
+### Autostart -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+#exec steam -silent
+#exec discord --start-minimized
+
+# Start network applet
+exec nm-applet
+
+# Start mako for notifications 
+exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
+    --anchor top-right --font $font\,$notif_font --border-size 0 \
+    --text-color '#$focus_fg' --background-color '#$focus_bg'"
+
+# Start polkit daemon
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Start clipboard manager
+exec sleep 3&&copyq
+
+### Output configuration -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+# Set primary monitor for X11 applications (important for most games)
+set $X_MON sleep 10&&exec xrandr --output $PRIMARY_MON --primary
+exec $X_MON
+
+# Set the wallpaper
+# Use a monitor variable like `$monL` instead of `*` to set each display individually
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Lock and turn off the screen
+bindsym --locked $mod+backslash mode "lock";output * dpms off;exec swaylock -ec 000000
+mode "lock" {
+    bindsym --locked space mode "default";output * dpms on;exec $X_MON
+    bindsym --locked Return mode "default";output * dpms on;exec $X_MON
+}
+
+# Lock and suspend on laptop lid close
+bindswitch lid:on exec swaylock -ec 000000;exec sh -c ' \
+    sleep 0.5; \
+    dbus-send --system --print-reply --dest=org.freedesktop.login1 \
+    /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true'
+
+# Monitor configuration (use command `man 5 sway-output` for more info)
+#
+# BUG: Currently adaptive sync may not work on sway unless direct scan-out is disabled
+# Please launch sway using command `sway -D noscanout`
+# If using a greeter edit /usr/share/wayland-sessions/sway.desktop
+# and on line 4 append ` -D noscanout`
+#
+# Uncomment and edit the example below
+# Use command `swaymsg -t get_output` to find exact refresh rate
+
+#output $monL resolution 1920x1080@74.973Hz position 0,100
+#output $monR resolution 1920x1080@119.982Hz position 1920,0 adaptive_sync enable
+
+### Input configuration -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+# To configure input devices individually use the input`s name instead of `*`
+# Use commands `swaymsg -t get_inputs` and `man 5 sway-input` for more info
+
+input * {
+    tap enable
+    #accel_profile flat
+    #middle_emulation enable
+    #natural_scroll enable
+    #dwt disable
+}
+
+# Touchpad gestures
+bindgesture swipe:3:left exec ~/.config/sway/bin/sway-overfocus group-lw
+bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
+
+### Key bindings
+#
+# Basics -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+    # Open your terminal
+    bindsym $mod+Return exec $term
+
+    # Open your file manager
+    bindsym $mod+e exec xdg-open ~
+
+    # Open your web browser
+    bindsym $mod+b exec xdg-open http:
+
+    # Open your text editor
+    bindsym $mod+comma exec $txt
+
+    # Launch calculator
+    bindsym $mod+m exec gnome-calculator
+
+    # Launch network manager
+    bindsym $mod+slash exec $term -T _FLOAT sh -c 'sleep 0.1&&nmtui-connect'
+
+    # Take screenshot
+    bindsym Print exec slurp | grim -g - - | wl-copy
+
+    # Toggle clipboard
+    bindsym $mod+c exec copyq toggle
+
+    # Toggle your app launcher
+    bindsym --release Super_L exec 'if [[ $(pidof $_menu) ]];then pkill $_menu;else $menu;fi'
+
+    # Kill focused window
+    bindsym Mod1+f4 kill
+    bindsym $mod+w kill
+    bindsym button3 kill
+
+    # Audio and media control
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+    bindsym XF86AudioPlay exec playerctl play-pause
+    bindsym XF86AudioStop exec playerctl stop
+    bindsym XF86AudioPrev exec playerctl previous
+    bindsym XF86AudioNext exec playerctl next
+
+    # Brightness control
+    bindsym --locked XF86MonBrightnessUp exec light -A 5
+    bindsym --locked XF86MonBrightnessDown exec light -U 5
+
+    # Edit the configuration file
+    bindsym $mod+Ctrl+c exec $txt ~/.config/sway/config
+
+    # Reload the configuration file
+    bindsym $mod+r reload
+
+    # Exit Sway
+    bindsym Ctrl+Mod1+Delete exit
+
+#
+# Layout -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+    workspace_layout tabbed
+
+    # Split the currently focused window
+    bindsym $mod+g splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+t layout tabbed
+    bindsym $mod+s layout toggle split
+
+    # Toggle fullscreen
+    bindsym $mod+f fullscreen
+    
+    # Toggle floating
+    bindsym $mod+Shift+f floating toggle
+
+    # Focus the parent container
+    bindsym $mod+a focus parent
+
+	# Tile window
+	bindsym button2 move up;move right
+
+    # Float certain windows by default
+    for_window [title="^_FLOAT$"] floating enable;border none
+    for_window [app_id="^pavucontrol$"] floating enable
+    for_window [app_id="^nm-connection-editor$"] floating enable
+    for_window [app_id="^com.github.hluk.copyq$"] floating enable
+    for_window [app_id="^org.kde.kdeconnect"] floating enable;splith;layout tabbed
+    for_window [title="^Picture-in-Picture$"] floating enable;border none
+    for_window [title="^Calculator$|^Calendar$|^System Monitor$|Properties$"] floating enable
+
+#
+# Moving around -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+    # Move your focus around
+    bindsym Mod1+Tab exec ~/.config/sway/bin/i3-focus-last switch
+    bindsym Mod1+grave exec ~/.config/sway/bin/sway-overfocus group-rw
+    exec ~/.config/sway/bin/i3-focus-last server
+
+    bindsym $mod+space focus mode_toggle
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    bindsym $mod+j focus left
+    bindsym $mod+k focus down
+    bindsym $mod+i focus up
+    bindsym $mod+l focus right
+
+    # Move the focused window
+    bindsym $mod+Shift+Left move left
+    bindsym $mod+Shift+Down move down
+    bindsym $mod+Shift+Up move up
+    bindsym $mod+Shift+Right move right
+
+    bindsym $mod+Shift+j move left
+    bindsym $mod+Shift+k move down
+    bindsym $mod+Shift+i move up
+    bindsym $mod+Shift+l move right
+
+    # Resize the focused window
+    bindsym $mod+Ctrl+Left resize shrink width 10px
+    bindsym $mod+Ctrl+Down resize shrink height 10px
+    bindsym $mod+Ctrl+Up resize grow height 10px
+    bindsym $mod+Ctrl+Right resize grow width 10px
+
+    bindsym $mod+Ctrl+j resize shrink width 10px
+    bindsym $mod+Ctrl+k resize shrink height 10px
+    bindsym $mod+Ctrl+i resize grow height 10px
+    bindsym $mod+Ctrl+l resize grow width 10px
+
+#
+# Workspaces -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+#
+    # Switch to workspace
+    bindsym $mod+1 workspace 1
+    bindsym $mod+2 workspace 2
+    bindsym $mod+3 workspace 3
+    bindsym $mod+4 workspace 4
+    bindsym $mod+5 workspace 5
+    bindsym $mod+6 workspace 6
+
+    # Move to workspace
+    bindsym $mod+Shift+1 move workspace 1
+    bindsym $mod+Shift+2 move workspace 2
+    bindsym $mod+Shift+3 move workspace 3
+    bindsym $mod+Shift+4 move workspace 4
+    bindsym $mod+Shift+5 move workspace 5
+    bindsym $mod+Shift+6 move workspace 6
+
+# Appearance and misc.
+
+font $font bold $title_font
+title_align center
+
+client.focused 000000 000000 $focus_fg 000000
+client.unfocused 000000 000000 $unfocus_fg 000000
+client.focused_inactive 000000 000000 $unfocus_fg 000000
+client.urgent 900000 900000 $focus_fg
+
+bar {
+	swaybar_command waybar
+}
+
+#xwayland disable
+for_window [title="^Wine System Tray$"] kill
+for_window [title="Sharing Indicator$"] kill
+for_window [title=" is sharing a window.$"] move scratchpad
