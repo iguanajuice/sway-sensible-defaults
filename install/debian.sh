@@ -5,3 +5,4 @@ sway swaybg swaylock waybar mako fuzzel foot micro playerctl light policykit-1-g
 
 cp -r config/* ~/.config
 chmod -R +x ~/.config/sway/bin
+sudo cp -r share/* /usr/share
