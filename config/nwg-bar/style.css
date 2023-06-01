@@ -1,0 +1,22 @@
+window {
+        background-color: transparent;
+}
+
+/* Inner bar container, surrounds buttons */
+#inner-box {
+	background-color: black;
+	border-radius: 25px;
+	padding: 5px;
+}
+
+button, image {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+button {
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 5px;
+}
