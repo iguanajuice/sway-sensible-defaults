@@ -224,7 +224,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     for_window [app_id="^com.github.hluk.copyq$"] floating enable
     for_window [app_id="^org.kde.kdeconnect"] floating enable;splith;layout tabbed
     for_window [title="^Picture-in-Picture$"] floating enable;border none
-    for_window [title="^Calculator$|^Calendar$|^System Monitor$|Properties$"] floating enable
+    for_window [title="^Calculator$|^Calendar$|^Weather$|^System Monitor$|Properties$"] floating enable
 
 #
 # Moving around -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
