@@ -1,14 +1,11 @@
 * {
     font-family: SourceCodePro;
     font-size: 12;
+    border: none;
 }
 
 #waybar {
-    background-color: alpha(black, 1);
-}
-
-button {
-	border: none;
+    background-color: black;
 }
 
 #workspaces button,
