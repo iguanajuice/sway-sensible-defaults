@@ -8,3 +8,5 @@ network-manager-applet copyq wl-clipboard slurp grim
 cp -r config/* ~/.config
 chmod -R +x ~/.config/sway/bin
 sudo cp -r share/* /usr/share
+sudo echo QT_QPA_PLATFORMTHEME=gnome sway -D noscanout > /usr/local/bin/sway
+sudo chmod +x /usr/local/bin/sway
