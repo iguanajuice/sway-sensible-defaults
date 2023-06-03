@@ -18,7 +18,6 @@ set $unfocus_bg 121212fd
 # Terminal font can be changed at ~/.config/foot/foot.ini
 # The top bar's font can be changed at ~/.config/waybar/style.css
 # Application font can be changed using `gnome-tweaks`
-# Packges `qgnomeplatform-qt5` and `qgnomeplatform-qt6` should also be installed
 set $font SourceCodePro
 set $title_font 9
 set $notif_font 10
@@ -96,16 +95,9 @@ bindswitch lid:on exec swaylock -ec 000000;exec sh -c ' \
     dbus-send --system --print-reply --dest=org.freedesktop.login1 \
     /org/freedesktop/login1 org.freedesktop.login1.Manager.Suspend boolean:true'
 
-# Monitor configuration (use command `man 5 sway-output` for more info)
-#
-# BUG: Currently adaptive sync may not work on sway unless direct scan-out is disabled
-# Please launch sway using command `sway -D noscanout`
-# If using a greeter edit /usr/share/wayland-sessions/sway.desktop
-# and on line 4 append ` -D noscanout`
-#
+# Monitor configuration (use command `swaymsg -t get_output` to find exact refresh rate)
 # Uncomment and edit the example below
-# Use command `swaymsg -t get_output` to find exact refresh rate
-# Be sure to set your monitor's output variables under the `Variables` section
+# Be sure to set your monitor's output variables under the `Variables` section above
 
 #output $monL resolution 1920x1080@74.973Hz position 0,100
 #output $monR resolution 1920x1080@119.982Hz position 1920,0 adaptive_sync enable
