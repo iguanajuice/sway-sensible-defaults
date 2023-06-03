@@ -5,8 +5,8 @@ window {
 /* Inner bar container, surrounds buttons */
 #inner-box {
 	background-color: black;
-	border-radius: 5px;
-	padding: 5px;
+	border-radius: 5;
+	padding: 5;
 }
 
 button, image {
@@ -16,7 +16,7 @@ button, image {
 }
 
 button {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin: 5px;
+	padding-left: 10;
+	padding-right: 10;
+	margin: 5;
 }
