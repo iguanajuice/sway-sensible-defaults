@@ -105,6 +105,7 @@ bindswitch lid:on exec swaylock -ec 000000;exec sh -c ' \
 #
 # Uncomment and edit the example below
 # Use command `swaymsg -t get_output` to find exact refresh rate
+# Be sure to set your monitor's output variables under the `Variables` section
 
 #output $monL resolution 1920x1080@74.973Hz position 0,100
 #output $monR resolution 1920x1080@119.982Hz position 1920,0 adaptive_sync enable
