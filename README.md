@@ -20,7 +20,6 @@ A better default config for sway. Minimally riced and includes most basic to int
 
 To install, run:
 - `sh install/arch.sh` if you are using Arch/Manjaro/Garuda/EndeavourOS
-- `sh install/debian.sh` if you are using Debian/Ubuntu/Mint/Pop_OS
 - `sh install/fedora.sh` if you are using Fedora/Nobara
 
 **WARNING:** This will overwrite any existing config for sway, waybar, and foot.
