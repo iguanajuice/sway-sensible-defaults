@@ -57,6 +57,9 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg \
 # Start network applet
 exec nm-applet
 
+# Start clipboard manager
+exec sleep 3&&copyq
+
 # Start mako for notifications 
 exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
     --anchor top-right --font $font\,$notif_font --border-size 0 \
@@ -65,8 +68,8 @@ exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
 # Start polkit daemon
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-# Start clipboard manager
-exec sleep 3&&copyq
+# Update systemd user environment
+include /etc/sway/config.d/50-systemd-user.conf
 
 ### Output configuration -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
