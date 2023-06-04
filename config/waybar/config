@@ -62,7 +62,7 @@
         "format": ""
     },
     "clock": {
-        "format": "{:%I:%M %p  %b %d %a}",
+        "format": "{:%I:%M %p  %a %d %b}",
         "on-click": "gnome-calendar",
     },
     "battery": {
