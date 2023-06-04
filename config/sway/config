@@ -49,9 +49,6 @@ set $_menu fuzzel
 set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg \
     -w 64 -s $focus_bg -S $focus_fg -m $focus_fg -M ffff00ff -B 0 -r 0 -ID no
 
-# Set environment variables
-exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
 ### Autostart -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
 #exec steam -silent
