@@ -51,7 +51,6 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg \
 
 # Set environment variables
 exec dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-exec export QT_QPA_PLATFORMTHEME=gnome
 
 ### Autostart -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
