@@ -1,5 +1,5 @@
 window {
-        background-color: transparent;
+	background-color: transparent;
 }
 
 /* Inner bar container, surrounds buttons */
@@ -9,14 +9,10 @@ window {
 	padding: 5;
 }
 
-button, image {
+button {
 	background: none;
 	border: none;
 	box-shadow: none;
-}
-
-button {
-	padding-left: 10;
-	padding-right: 10;
+	padding: 5 10 5 10;
 	margin: 5;
 }
