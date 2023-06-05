@@ -8,5 +8,5 @@ network-manager-applet pavucontrol copyq wl-clipboard slurp grim gsfonts ttf-fon
 cp -r config/* ~/.config
 chmod -R +x ~/.config/sway/bin
 sudo cp -r share/* /usr/share
-echo QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout | sudo tee /usr/local/bin/sway
+echo QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout "$@" | sudo tee /usr/local/bin/sway
 sudo chmod +x /usr/local/bin/sway
