@@ -183,7 +183,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     # Exit Sway
     bindsym Ctrl+Mod1+Delete exit
 
-    # Temporarily unbind all keys
+    # Temporarily unbind all actions
     mode "unbind" {
         bindsym $mod+escape mode "default"
     }
