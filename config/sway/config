@@ -25,12 +25,6 @@ set $menu_font 11
 # Set display scaling factor (increase for hi-dpi displays)
 output * scale 1
 
-# Monitor output variables (Use command `swaymsg -t get_outputs` for monitor info)
-# Uncomment and edit these to match your setup
-#set $monL HDMI-A-2
-#set $monR DP-1
-#set $PRIMARY_MON $monR
-
 # Your preferred terminal emulator
 # Note that you may also need to set the prefered terminal for your file manager
 # You can set it in nemo using the command below
@@ -69,12 +63,8 @@ include /etc/sway/config.d/50-systemd-user.conf
 
 ### Output configuration -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
-# Set primary monitor for X11 applications (important for most games)
-set $X_MON sleep 10&&exec xrandr --output $PRIMARY_MON --primary
-exec $X_MON
-
 # Set the wallpaper
-# Use a monitor variable like `$monL` instead of `*` to set each display individually
+# Use a monitor variable like `HDMI-A-2` instead of `*` to set each display individually
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Lock and turn off the screen
@@ -95,13 +85,17 @@ bindswitch lid:on exec swaylock -ec 000000;exec sh -c ' \
 # Uncomment and edit the example below
 # Be sure to set your monitor's output variables under the `Variables` section above
 
-#output $monL resolution 1920x1080@74.973Hz position 0,100
-#output $monR resolution 1920x1080@119.982Hz position 1920,0 adaptive_sync enable
+#output HDMI-A-2 resolution 1920x1080@74.973Hz position 0,100
+#output DP-1 resolution 1920x1080@119.982Hz position 1920,0 adaptive_sync enable
+
+# Set primary monitor for X11 applications (important for most games)
+set $X_MON sleep 10&&exec xrandr --output DP-1 --primary
+exec $X_MON
 
 ### Input configuration -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
 # To configure input devices individually use the input`s name instead of `*`
-# Use commands `swaymsg -t get_inputs` and `man 5 sway-input` for more info
+# Use command `swaymsg -t get_inputs` to list all input names
 
 input * {
     tap enable
@@ -112,9 +106,9 @@ input * {
 }
 
 # Change keyboard layout for multiple languages
-# Layout codes can be found by running command `localectl list-x11-keymap-layouts`
+# xkb_layout codes can be found by running command `localectl list-x11-keymap-layouts`
 input type:keyboard {
-	xkb_layout us
+	xkb_layout us,
 	xkb_options grp:alt_shift_toggle
 }
 
