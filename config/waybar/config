@@ -73,7 +73,7 @@
         "spacing": 10
     },
 	"custom/bar": {
-		"exec": "whoami",
+		"format": "",
 		"on-click": "~/.config/sway/bin/nwg-bar",
 		"on-click-middle": "gnome-system-monitor",
 		"on-click-right": "makoctl restore",
