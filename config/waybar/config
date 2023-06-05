@@ -40,7 +40,7 @@
 		"format": "<span style='italic'>{}</span>"
 	},
 	"clock": {
-		"format": "{: %I:%M %p   %a %d %b}",
+		"format": "{:      %I:%M %p   %a %d %b}",
 		"on-click": "gnome-calendar",
 	},
 	"battery": {
