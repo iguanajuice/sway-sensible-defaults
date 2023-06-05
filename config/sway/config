@@ -150,14 +150,14 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym Print exec slurp | grim -g - - | wl-copy
 
     # Toggle clipboard
-    bindsym $mod+c exec copyq toggle
+    bindsym $mod+c exec 'if [[ $(pidof copyq) ]];then copyq;else copyq toggle;fi'
 
     # Toggle your app launcher
     bindsym --release Super_L exec 'if [[ $(pidof $_menu) ]];then pkill $_menu;else $menu;fi'
 
     # Kill focused window
     bindsym Mod1+f4 kill
-    bindsym $mod+w kill
+    bindsym $mod+q kill
     bindsym button3 kill
 
     # Audio and media control
