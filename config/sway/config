@@ -15,7 +15,6 @@ set $unfocus_fg aaaaaaff
 set $unfocus_bg 121212fd
 
 # Font size and style
-# Terminal font can be changed at ~/.config/foot/foot.ini
 # The top bar's font can be changed at ~/.config/waybar/style.css
 # Application font can be changed using `gnome-tweaks`
 set $font SourceCodePro
@@ -35,8 +34,8 @@ output * scale 1
 # Your preferred terminal emulator
 # Note that you may also need to set the prefered terminal for your file manager
 # You can set it in nemo using the command below
-# gsettings set org.cinnamon.desktop.default-applications.terminal exec foot
-set $term foot
+# gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
+set $term kitty
 
 # Your prefered text editor
 set $txt $term -T 'micro' micro
@@ -216,8 +215,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 	bindsym button2 move up;move right
 
     # Float certain windows by default
-    for_window [title="^_FLOAT$"] floating enable;border none
-    for_window [app_id="^pavucontrol$"] floating enable
+    for_window [title="^_FLOAT$"] floating enable;border none;resize set 600 640
+    for_window [app_id="^pavucontrol$"] floating enable;resize set 960 640
     for_window [app_id="^nm-connection-editor$"] floating enable
     for_window [app_id="^com.github.hluk.copyq$"] floating enable
     for_window [app_id="^org.kde.kdeconnect"] floating enable;splith;layout tabbed
