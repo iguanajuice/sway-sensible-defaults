@@ -15,8 +15,7 @@
 #battery,
 #pulseaudio,
 #network,
-#tray,
-#custom-logout {
+#tray {
 	color: white;
 	border-radius: 0;
 	padding: 0 12;
@@ -36,6 +35,10 @@
 	font-weight: bold;
 	color: white;
 	padding: 0 12;
+}
+
+#custom-bar {
+	font-size: 16;
 }
 
 #workspaces button {
