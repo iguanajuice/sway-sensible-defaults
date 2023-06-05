@@ -84,7 +84,8 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 bindsym --locked $mod+backslash mode "lock";output * dpms off;exec swaylock -ec 000000
 mode "lock" {
     bindsym --locked space mode "default";output * dpms on;exec $X_MON
-    bindsym --locked Return mode "default";output * dpms on;exec $X_MON
+    bindsym --locked return mode "default";output * dpms on;exec $X_MON
+    bindsym --locked backspace mode "default";output * dpms on;exec $X_MON
 }
 
 # Lock and suspend on laptop lid close
@@ -129,7 +130,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 # Basics -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
     # Open your terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+return exec $term
 
     # Open your file manager
     bindsym $mod+e exec xdg-open ~
