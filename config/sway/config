@@ -53,9 +53,6 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
 #exec steam -silent
 #exec discord --start-minimized
 
-# Start network applet
-exec nm-applet
-
 # Start clipboard manager
 exec_always sleep 3&&copyq
 
