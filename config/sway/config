@@ -12,7 +12,7 @@ floating_modifier Mod1 normal
 set $focus_fg ffffffff
 set $focus_bg 242424ff
 set $unfocus_fg aaaaaaff
-set $unfocus_bg 121212fd
+set $unfocus_bg 121212ff
 
 # Font size and style
 # The top bar's font can be changed at ~/.config/waybar/style.css
