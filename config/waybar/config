@@ -1,7 +1,7 @@
 {
 	//"position": "bottom",
 	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "custom/L0", "custom/L1", "custom/L2", "sway/mode"],
+	"modules-left": ["sway/workspaces", "custom/L0", "custom/L1", "sway/mode"],
 	"modules-center": ["clock"],
 	"modules-right": ["pulseaudio", "network", "battery", "tray", "custom/bar"],
 
