@@ -4,7 +4,7 @@ window {
 
 /* Inner bar container, surrounds buttons */
 #inner-box {
-	background-color: black;
+	background-color: alpha(black, 0.9);
 	border-radius: 5;
 	padding: 5;
 }
