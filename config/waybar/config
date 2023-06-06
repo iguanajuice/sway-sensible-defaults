@@ -32,15 +32,13 @@
 	"custom/game": {
 		"format": " Games",
 		"on-click": "steam",
-		"on-click-middle": "heroic",
-		"on-click-right": "lutris",
+		"on-click-right": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-game.json",
 		"tooltip": false
 	},
 	"custom/emu": {
 		"format": " Emulators",
-		"on-click": "dolphin-emu",
-		"on-click-middle": "rpcs3",
-		"on-click-right": "pcsx2-qt",
+		"on-click": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-emu.json",
+		"on-click-right": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-emu.json",
 		"tooltip": false
 	},
 	"sway/mode": {
