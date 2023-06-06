@@ -23,10 +23,5 @@
     "label": "RPCS3",
     "exec": "rpcs3",
     "icon": "/usr/share/nwg-bar/images/rpcs3.svg"
-  },
-  {
-    "label": "Cemu",
-    "exec": "cemu",
-    "icon": "/usr/share/nwg-bar/images/cemu.svg"
   }
 ]
