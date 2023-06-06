@@ -21,16 +21,11 @@
 	padding: 0 12;
 }
 
-#custom-L0,
-#custom-L1,
-#custom-L2,
-#custom-L3,
-#custom-L4,
-#custom-L5,
-#custom-L6,
-#custom-L7,
-#custom-L8,
-#custom-L9,
+#custom-file,
+#custom-web,
+#custom-game,
+#custom-emu,
+#custom-ss,
 #custom-bar {
 	font-weight: bold;
 	color: white;
