@@ -1,0 +1,32 @@
+[
+  {
+    "label": "RetroArch",
+    "exec": "retroarch",
+    "icon": "/usr/share/nwg-bar/images/retroarch.svg"
+  },
+  {
+    "label": "Duckstation",
+    "exec": "duckstation-qt",
+    "icon": "/usr/share/nwg-bar/images/duckstation.svg"
+  },
+  {
+    "label": "PCSX2",
+    "exec": "pcsx2-qt",
+    "icon": "/usr/share/nwg-bar/images/PCSX2.svg"
+  },
+  {
+    "label": "Dolphin",
+    "exec": "dolphin-emu",
+    "icon": "/usr/share/nwg-bar/images/dolphin-emu.svg"
+  },
+  {
+    "label": "RPCS3",
+    "exec": "rpcs3",
+    "icon": "/usr/share/nwg-bar/images/rpcs3.svg"
+  },
+  {
+    "label": "Cemu",
+    "exec": "cemu",
+    "icon": "/usr/share/nwg-bar/images/cemu.svg"
+  }
+]
