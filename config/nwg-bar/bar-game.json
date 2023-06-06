@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Lutris",
+    "exec": "lutris",
+    "icon": "/usr/share/nwg-bar/images/lutris.svg"
+  },
+  {
+    "label": "Heroic",
+    "exec": "heroic",
+    "icon": "/usr/share/nwg-bar/images/heroic.svg"
+  },
+  {
+    "label": "PrismLauncher",
+    "exec": "prismlauncher",
+    "icon": "/usr/share/nwg-bar/images/prismlauncher.svg"
+  }
+]
