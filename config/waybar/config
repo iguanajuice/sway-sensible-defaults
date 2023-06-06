@@ -1,8 +1,8 @@
 {
 	//"position": "bottom",
 	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "custom/L0", "custom/L1", "sway/mode"],
-	"modules-center": ["clock"],
+	"modules-left": ["sway/workspaces", "custom/file", "custom/web", "##custom/game", "#custom/emu"],
+	"modules-center": ["clock", "custom/ss"],
 	"modules-right": ["pulseaudio", "network", "battery", "tray", "custom/bar"],
 
 	"sway/workspaces": {
@@ -17,32 +17,44 @@
 			"6": []
 		}
 	},
-	"custom/L0": {
+	"custom/file": {
 		"format": " Files",
 		"on-click": "xdg-open ~",
 		"on-click-middle": "xdg-open /",
 		"tooltip": false
 	},
-	"custom/L1": {
+	"custom/web": {
 		"format": " Browser",
 		"on-click": "xdg-open http:",
 		"on-click-middle": "firefox --private-window",
 		"tooltip": false
 	},
-	"custom/L2": {
-		"format": " Games",
+	"custom/game": {
+		"format": " Games",
 		"on-click": "steam",
 		"on-click-middle": "heroic",
 		"on-click-right": "lutris",
+		"tooltip": false
+	},
+	"custom/emu": {
+		"format": " Emulators",
+		"on-click": "dolphin-emu",
+		"on-click-middle": "rpcs3",
+		"on-click-right": "pcsx2-qt",
 		"tooltip": false
 	},
 	"sway/mode": {
 		"format": "<span style='italic'>{}</span>"
 	},
 	"clock": {
-		"format": "{:      %I:%M %p   %a %d %b}",
+		"format": "{: %I:%M %p   %a %d %b}",
 		"on-click": "gnome-calendar",
 		"on-click-right": "gnome-weather"
+	},
+	"custom/ss": {
+		"format": "",
+		"on-click": "slurp | grim -g - - | wl-copy",
+		"tooltip": false
 	},
 	"battery": {
 		"states": {
