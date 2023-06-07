@@ -2,16 +2,16 @@
   {
     "label": "Lutris",
     "exec": "lutris",
-    "icon": "/usr/share/nwg-bar/images/lutris.svg"
+    "icon": "/usr/share/nwg-bar/lutris.svg"
   },
   {
     "label": "Heroic",
     "exec": "heroic",
-    "icon": "/usr/share/nwg-bar/images/heroic.svg"
+    "icon": "/usr/share/icons/nwg-bar/heroic.svg"
   },
   {
     "label": "PrismLauncher",
     "exec": "prismlauncher",
-    "icon": "/usr/share/nwg-bar/images/prismlauncher.svg"
+    "icon": "/usr/share/icons/nwg-bar/prismlauncher.svg"
   }
 ]
