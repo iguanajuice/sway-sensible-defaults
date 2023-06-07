@@ -2,26 +2,26 @@
   {
     "label": "RetroArch",
     "exec": "retroarch",
-    "icon": "/usr/share/nwg-bar/images/retroarch.svg"
+    "icon": "/usr/share/icons/nwg-bar/retroarch.svg"
   },
   {
     "label": "Duckstation",
     "exec": "duckstation-qt",
-    "icon": "/usr/share/nwg-bar/images/duckstation.svg"
+    "icon": "/usr/share/icons/nwg-bar/duckstation.svg"
   },
   {
     "label": "PCSX2",
     "exec": "pcsx2-qt",
-    "icon": "/usr/share/nwg-bar/images/PCSX2.svg"
+    "icon": "/usr/share/icons/nwg-bar/PCSX2.svg"
   },
   {
     "label": "Dolphin",
     "exec": "dolphin-emu",
-    "icon": "/usr/share/nwg-bar/images/dolphin-emu.svg"
+    "icon": "/usr/share/icons/nwg-bar/dolphin-emu.svg"
   },
   {
     "label": "RPCS3",
     "exec": "rpcs3",
-    "icon": "/usr/share/nwg-bar/images/rpcs3.svg"
+    "icon": "/usr/share/icons/nwg-bar/rpcs3.svg"
   }
 ]
