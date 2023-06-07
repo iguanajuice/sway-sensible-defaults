@@ -50,7 +50,7 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
 exec sleep 3&&dex ~/.config/autostart/*
 
 # Start clipboard manager
-exec_always copyq
+exec_always sleep 1&&copyq
 
 # Start mako for notifications 
 exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
