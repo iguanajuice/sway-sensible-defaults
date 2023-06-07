@@ -2,7 +2,7 @@
   {
     "label": "Lutris",
     "exec": "lutris",
-    "icon": "/usr/share/nwg-bar/lutris.svg"
+    "icon": "/usr/share/icons/nwg-bar/lutris.svg"
   },
   {
     "label": "Heroic",
