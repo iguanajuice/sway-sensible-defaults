@@ -7,6 +7,6 @@ dex network-manager-applet pavucontrol copyq wl-clipboard slurp grim gsfonts otf
 
 cp -r config/* ~/.config
 chmod -R +x ~/.config/sway/bin
-sudo cp share/icons/nwg-bar /usr/share/icons
+sudo cp -r share/icons/nwg-bar /usr/share/icons
 echo 'QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout "$@"' | sudo tee /usr/local/bin/sway
 sudo chmod +x /usr/local/bin/sway
