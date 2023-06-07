@@ -75,7 +75,7 @@
 		"format-wifi": " {signalStrength}%",
 		"format-ethernet": " Wired",
 		"format-disconnected": " N/A",
-		"on-click": "if [ $(pidof nmtui) ];then pkill nmtui;else kitty -T _FLOAT sh -c 'sleep 0.1&&nmtui-connect';fi",
+		"on-click": "if [[ $(pidof nmtui) ]];then pkill nmtui;else kitty -T _FLOAT sh -c 'sleep 0.1&&nmtui-connect';fi",
 		"on-click-right": "nm-connection-editor",
 		"tooltip": false
 	},
