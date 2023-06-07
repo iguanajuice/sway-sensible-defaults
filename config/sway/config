@@ -44,11 +44,13 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
 
 ### Autostart -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
-#exec steam -silent
-#exec discord --start-minimized
+# Autostart XDG desktop files
+# You can add programs to autostart by using `gnome-tweaks`
+# Configure launch options by editing .desktop files in `~/.config/autostart/`
+exec sleep 3&&dex ~/.config/autostart/*
 
 # Start clipboard manager
-exec_always sleep 3&&copyq
+exec_always copyq
 
 # Start mako for notifications 
 exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
@@ -142,7 +144,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym Print exec slurp | grim -g - - | wl-copy
 
     # Toggle clipboard
-    bindsym $mod+c exec 'if [[ $(pidof copyq) ]];then copyq toggle;else copyq;fi'
+    bindsym $mod+c exec copyq toggle
 
     # Toggle app launcher
     bindsym --release Super_L exec 'if [ $(pidof $_menu) ];then pkill $_menu;else $menu;fi'
