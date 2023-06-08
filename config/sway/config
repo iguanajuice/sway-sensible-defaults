@@ -47,7 +47,7 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
 # Autostart XDG desktop files
 # You can add programs to autostart by using `gnome-tweaks`
 # Configure launch options by editing .desktop files in `~/.config/autostart/`
-exec sleep 1&&dex ~/.config/autostart/*
+exec sleep 1.5&&dex ~/.config/autostart/*
 
 # Start clipboard manager
 exec sh -c 'pkill copyq;sleep 1;copyq'
