@@ -74,7 +74,6 @@ bindsym --locked $mod+backslash mode "lock";output * dpms off;exec swaylock -ec 
 mode "lock" {
     bindsym --locked space mode "default";output * dpms on;exec $X_MON
     bindsym --locked return mode "default";output * dpms on;exec $X_MON
-    bindsym --locked backspace mode "default";output * dpms on;exec $X_MON
 }
 
 # Lock and suspend on laptop lid close
