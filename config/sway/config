@@ -48,7 +48,6 @@ set $menu $_menu -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
 # You can add programs to autostart by using `gnome-tweaks`
 # Configure launch options by editing .desktop files in `~/.config/autostart/`
 exec sleep 1.5&&dex ~/.config/autostart/*
-exec /usr/lib/kdeconnectd
 
 # Start clipboard manager
 exec sh -c 'pkill copyq;sleep 1;copyq'
@@ -60,6 +59,10 @@ exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
 
 # Start polkit daemon
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Start KDE Connect
+exec /usr/lib/kdeconnectd
+exec kdeconnect-indicator
 
 # Update systemd user environment
 include /etc/sway/config.d/50-systemd-user.conf
