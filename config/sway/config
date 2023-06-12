@@ -274,7 +274,6 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym $mod+3 workspace 3
     bindsym $mod+4 workspace 4
     bindsym $mod+5 workspace 5
-    bindsym $mod+6 workspace 6
 
     # Move to workspace
     bindsym $mod+Shift+1 move workspace 1
@@ -282,7 +281,6 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym $mod+Shift+3 move workspace 3
     bindsym $mod+Shift+4 move workspace 4
     bindsym $mod+Shift+5 move workspace 5
-    bindsym $mod+Shift+6 move workspace 6
 
 # Appearance and misc.
 
