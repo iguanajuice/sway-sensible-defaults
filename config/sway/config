@@ -50,12 +50,12 @@ set $menu $_menu -T $term -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg
 exec sleep 1.5&&dex ~/.config/autostart/*
 
 # Start clipboard manager
-exec sh -c 'pkill copyq;sleep 1;copyq'
+exec copyq
 
 # Start mako for notifications 
-exec_always sh -c "pkill mako;mako --output $PRIMARY_MON --ignore-timeout 0 \
+exec mako --output $PRIMARY_MON --ignore-timeout 0 \
     --anchor top-right --font $font\,$notif_font --border-size 0 \
-    --text-color '#$focus_fg' --background-color '#$focus_bg'"
+    --text-color '#$focus_fg' --background-color '#$focus_bg'
 
 # Start polkit daemon
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
