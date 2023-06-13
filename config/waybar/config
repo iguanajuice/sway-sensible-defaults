@@ -1,7 +1,7 @@
 {
 	//"position": "bottom",
 	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "custom/file", "custom/web", "#custom/game", "#custom/emu"],
+	"modules-left": ["sway/workspaces", "custom/file", "custom/web", "#custom/game", "#custom/emu", "sway/mode"],
 	"modules-center": ["clock"],
 	"modules-right": ["custom/ss", "battery", "pulseaudio", "network", "tray", "custom/bar"],
 
