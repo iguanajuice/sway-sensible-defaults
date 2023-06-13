@@ -8,5 +8,5 @@ dex nm-connection-editor pavucontrol copyq wl-clipboard slurp grim gsfonts otf-f
 cp -r config/* ~/.config
 chmod -R +x ~/.config/sway/bin
 sudo cp -r share/icons/nwg-bar /usr/share/icons
-echo 'QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout "$@"' | sudo tee /usr/local/bin/sway
+echo 'XDG_CURRENT_DESKTOP=sway QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout "$@"' | sudo tee /usr/local/bin/sway
 sudo chmod +x /usr/local/bin/sway
