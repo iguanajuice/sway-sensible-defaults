@@ -40,7 +40,7 @@ set $txt $term -T 'micro' micro
 # Application launcher
 set $_menu fuzzel
 set $menu $_menu -T $term -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
-    -s $focus_bg -S $focus_fg -m $focus_fg -M ffff00ff -C $focus_bg -r 0 -ID no
+    -s $focus_bg -S $focus_fg -m $focus_fg -M ffff00ff -C $focus_bg -B 2 -r 0 -ID no
 
 ### Autostart -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
