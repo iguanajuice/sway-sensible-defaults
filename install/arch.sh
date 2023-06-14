@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo pacman --needed --noconfirm -S \
-sway swaybg swaylock waybar mako fuzzel kitty micro playerctl light polkit-gnome xdg-desktop-portal-wlr \
+sway swaybg swaylock waybar mako fuzzel kitty micro playerctl light polkit-gnome xdg-desktop-portal-wlr xorg-xwayland \
 gnome-calculator gnome-calendar gnome-system-monitor gnome-tweaks gnome-themes-extra qgnomeplatform-qt5 qgnomeplatform-qt6 \
 dex nm-connection-editor pavucontrol copyq wl-clipboard slurp grim gsfonts otf-font-awesome
 
