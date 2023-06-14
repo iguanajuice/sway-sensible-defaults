@@ -74,7 +74,7 @@ include /etc/sway/config.d/50-systemd-user.conf
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 # Lock and turn off the screen
-bindsym --locked $mod+backslash mode "lock";output * dpms off;exec swaylock -ec 000000
+bindsym --locked $mod+backslash mode "lock";exec swaylock -ec 000000;output * dpms off
 mode "lock" {
     bindsym --locked space mode "default";output * dpms on;exec $X_MON
     bindsym --locked return mode "default";output * dpms on;exec $X_MON
