@@ -11,5 +11,5 @@ sudo cp -r share/icons/nwg-bar /usr/share/icons
 echo 'XDG_CURRENT_DESKTOP=sway QT_QPA_PLATFORMTHEME=gnome /bin/sway -D noscanout "$@"' | sudo tee /usr/local/bin/sway
 sudo chmod +x /usr/local/bin/sway
 
-gsettings set org.cinnamon.desktop.default-applications.terminal kitty
+gsettings set org.cinnamon.desktop.default-applications.terminal exec kitty
 gsettings set org.gnome.desktop.interface clock-format 12h
