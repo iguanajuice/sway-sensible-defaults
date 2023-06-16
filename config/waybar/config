@@ -1,7 +1,7 @@
 {
 	//"position": "bottom",
 	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "custom/file", "custom/web", "#custom/game", "#custom/emu", "sway/mode"],
+	"modules-left": ["sway/workspaces", "custom/file", "custom/web", "sway/mode"],
 	"modules-center": ["clock"],
 	"modules-right": ["custom/ss", "battery", "pulseaudio", "network", "tray", "custom/bar"],
 
@@ -26,18 +26,6 @@
 		"format": " Browser",
 		"on-click": "xdg-open http:",
 		"on-click-middle": "firefox --private-window",
-		"tooltip": false
-	},
-	"custom/game": {
-		"format": " Games",
-		"on-click": "steam",
-		"on-click-right": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-game.json",
-		"tooltip": false
-	},
-	"custom/emu": {
-		"format": " Emulators",
-		"on-click": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-emu.json",
-		"on-click-right": "~/.config/sway/bin/nwg-bar -t ~/.config/nwg-bar/bar-emu.json",
 		"tooltip": false
 	},
 	"sway/mode": {
