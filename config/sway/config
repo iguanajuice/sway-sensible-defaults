@@ -137,7 +137,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym $mod+m exec gnome-calculator
 
     # Launch network manager
-    bindsym $mod+slash exec $term -T _FLOAT sh -c 'sleep 0.1&&nmtui-connect'
+    bindsym $mod+slash exec $term -T _FLOAT sh -c 'sleep 0.2&&nmtui-connect'
 
     # Take screenshot
     bindsym Print exec slurp | grim -g - - | wl-copy
