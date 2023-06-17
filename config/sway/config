@@ -34,9 +34,6 @@ set $term kitty
 # Your prefered text editor
 set $txt $term -T 'micro' micro
 
-# Other default apps (such as web browsers and file managers) can be changed
-# by editing `~/.config/mimeapps.list`
-
 # Application launcher
 set $_menu fuzzel
 set $menu $_menu -T $term -f $font:size=$menu_font -b $unfocus_bg -t $unfocus_fg -w 64 \
