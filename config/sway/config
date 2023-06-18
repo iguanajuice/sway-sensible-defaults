@@ -57,7 +57,6 @@ exec_always mako --ignore-timeout 0 --anchor top-right --font $font\,$notif_font
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Start KDE Connect
-exec /usr/lib/kdeconnectd
 exec kdeconnect-indicator
 
 # Update systemd user environment
