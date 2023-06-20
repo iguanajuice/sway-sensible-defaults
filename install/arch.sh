@@ -3,7 +3,7 @@
 sudo sh -c "
   pacman --needed --noconfirm -S \
   sway swaybg swaylock waybar mako fuzzel kitty micro playerctl light polkit-gnome xdg-desktop-portal-wlr xdg-user-dirs xorg-xwayland \
-  gnome-calculator gnome-calendar gnome-weather gnome-system-monitor gnome-tweaks gnome-themes-extra \
+  gnome-calculator gnome-calendar gnome-weather gnome-system-monitor gnome-tweaks gnome-themes-extra dconf-editor \
   qgnomeplatform-qt5 qgnomeplatform-qt6 dex nm-connection-editor pavucontrol copyq wl-clipboard slurp grim gsfonts ttf-font-awesome
   
   cp -r config/* ~/.config
