@@ -17,6 +17,7 @@ set $unfocus_bg 121212ff
 # Font size and style
 # The top bar's font can be changed at ~/.config/waybar/style.css
 # Application font can be changed using `gnome-tweaks`
+# or by setting the GTK_THEME environment variable
 set $font SourceCodePro
 set $title_font 9
 set $notif_font 10
