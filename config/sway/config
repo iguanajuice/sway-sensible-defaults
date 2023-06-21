@@ -277,7 +277,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 
 font $font bold $title_font
 title_align center
-default_border pixel 2
+#default_border pixel 2
 
 client.focused $focus_bg $unfocus_bg $focus_fg 000000
 client.unfocused $focus_bg 000000 $unfocus_fg 000000
