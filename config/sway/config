@@ -212,7 +212,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     for_window [title="^Picture-in-Picture$"] floating enable;border none
     for_window [app_id="^pavucontrol$"] floating enable;border normal 0;resize set 960 640
     for_window [app_id="^nm-connection-editor$"] floating enable;border normal 0
-    for_window [app_id="^com.github.hluk.copyq$"] floating enable;border none
+    for_window [app_id="^com.github.hluk.copyq$"] floating enable
     for_window [app_id="^org.kde.kdeconnect"] floating enable;resize set 960 640;splith;layout tabbed
     for_window [title="^Calculator$|^Calendar$|^Weather$|^System Monitor$|Properties$"] floating enable
     for_window [app_id="^xdg-desktop-portal-"] floating enable
