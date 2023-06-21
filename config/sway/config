@@ -209,8 +209,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym button2 move up;move right;splith;layout tabbed
 
     # Float certain windows by default
-    for_window [title="^_FLOAT$"] floating enable;border none;resize set 600 640
-    for_window [title="^Picture-in-Picture$"] floating enable;border none
+    for_window [title="^_FLOAT$"] floating enable;resize set 600 640
+    for_window [title="^Picture-in-Picture$"] floating enable
     for_window [app_id="^pavucontrol$"] floating enable;border normal 0;resize set 960 640
     for_window [app_id="^nm-connection-editor$"] floating enable;border normal 0
     for_window [app_id="^com.github.hluk.copyq$"] floating enable
