@@ -147,7 +147,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 
     # Toggle Wine system tray
     for_window [title="^Wine System Tray$"] border none;move scratchpad
-    bindsym $mod+x [title="^Wine System Tray$"] scratchpad show
+    bindsym $mod+w [title="^Wine System Tray$"] scratchpad show
 
     # Kill focused window
     bindsym Mod1+f4 kill
