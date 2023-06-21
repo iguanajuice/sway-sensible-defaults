@@ -146,7 +146,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 
     # Toggle Wine system tray
     for_window [title="^Wine System Tray$"] border none;move scratchpad
-    bindsym $mod+w [title="^Wine System Tray$"] scratchpad show
+    bindsym $mod+x [title="^Wine System Tray$"] scratchpad show
 
     # Kill focused window
     bindsym Mod1+f4 kill
@@ -156,7 +156,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     # Audio and media control
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-	bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioStop exec playerctl stop
@@ -191,8 +191,9 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+t layout tabbed
     bindsym $mod+s layout toggle split
+    bindsym $mod+w layout tabbed
+    bindsym $mod+t splith;layout tabbed
 
     # Toggle fullscreen
     bindsym $mod+f fullscreen
@@ -203,8 +204,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     # Focus the parent container
     bindsym $mod+a focus parent
 
-	# Tile window
-	bindsym button2 move up;move right
+    # Tile window
+    bindsym button2 move up;move right;splith;layout tabbed
 
     # Float certain windows by default
     for_window [title="^_FLOAT$"] floating enable;border none;resize set 600 640
