@@ -192,8 +192,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
+    bindsym $mod+d layout tabbed
     bindsym $mod+s layout toggle split
-    bindsym $mod+w layout tabbed
     bindsym $mod+t splith;layout tabbed
 
     # Toggle fullscreen
