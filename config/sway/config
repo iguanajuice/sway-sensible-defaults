@@ -186,9 +186,6 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 #
 # Layout -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
-    # Enable dwindle tiling
-    exec ~/.config/sway/bin/autotiling
-
     # Split the currently focused window
     bindsym $mod+g splith
     bindsym $mod+v splitv
