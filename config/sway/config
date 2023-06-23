@@ -152,6 +152,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     # Kill focused window
     bindsym Mod1+f4 kill
     bindsym $mod+q kill
+    bindsym $mod+shift+q focus parent;kill
     bindsym button3 kill
 
     # Audio and media control
