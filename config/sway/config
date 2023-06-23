@@ -186,14 +186,15 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 #
 # Layout -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
+    workspace_layout tabbed
+
     # Split the currently focused window
     bindsym $mod+g splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+d layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+s layout toggle split
-    bindsym $mod+t splith;layout tabbed
 
     # Toggle fullscreen
     bindsym $mod+f fullscreen
@@ -201,11 +202,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     # Toggle floating
     bindsym $mod+Shift+f floating toggle
 
-    # Focus the parent container
-    bindsym $mod+a focus parent
-
     # Tile window
-    bindsym button2 move up;move right;splith;layout tabbed
+    bindsym button2 move up;move right
 
     # Float certain windows by default
     for_window [title="^_FLOAT$"] floating enable;resize set 600 640
@@ -225,7 +223,6 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
     bindsym Mod1+grave exec ~/.config/sway/bin/sway-overfocus group-rw
     exec ~/.config/sway/bin/i3-focus-last server
 
-    bindsym $mod+space focus mode_toggle
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
@@ -262,8 +259,8 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 # Workspaces -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
     # Switch to workspace
-    bindsym $mod+1 workspace 1
     bindsym $mod+2 workspace 2
+    bindsym $mod+1 workspace 1
     bindsym $mod+3 workspace 3
     bindsym $mod+4 workspace 4
     bindsym $mod+5 workspace 5
@@ -279,12 +276,12 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 
 font $font bold $title_font
 title_align center
-default_border none
+default_border normal 0
 default_floating_border normal 0
 
-client.focused $focus_bg $unfocus_bg $focus_fg 000000
+client.focused $focus_bg 000000 $focus_fg 000000
 client.unfocused $focus_bg 000000 $unfocus_fg 000000
-client.focused_inactive $focus_bg $unfocus_bg $unfocus_fg 000000
+client.focused_inactive $focus_bg 000000 $unfocus_fg 000000
 client.urgent 900000 900000 $focus_fg
 
 bar {
