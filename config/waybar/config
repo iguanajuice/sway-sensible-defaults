@@ -23,7 +23,7 @@
 		"tooltip": false
 	},
 	"custom/web": {
-		"format": " Browser",
+		"format": " Web",
 		"on-click": "xdg-open http:",
 		"on-click-middle": "firefox --private-window",
 		"tooltip": false
