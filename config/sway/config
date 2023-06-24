@@ -11,7 +11,7 @@ floating_modifier Mod1 normal
 # Colors (applies to notifications and app launcher)
 set $focus_fg ffffffff
 set $focus_bg 242424ff
-set $unfocus_fg 999999ff
+set $unfocus_fg a0a0a0ff
 set $unfocus_bg 121212ff
 
 # Font size and style
