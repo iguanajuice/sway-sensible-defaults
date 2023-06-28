@@ -4,7 +4,7 @@ sudo sh -c "
   pacman --needed --noconfirm -S \
   sway swaybg swaylock python-i3ipc waybar mako fuzzel kitty micro playerctl light polkit-gnome xdg-desktop-portal-wlr xdg-user-dirs xorg-xwayland \
   gnome-calculator gnome-calendar gnome-weather gnome-system-monitor gnome-tweaks gnome-themes-extra dconf-editor \
-  qgnomeplatform-qt5 qgnomeplatform-qt6 dex nm-connection-editor pavucontrol copyq wl-clipboard slurp grim gsfonts ttf-font-awesome
+  qgnomeplatform-qt5 qgnomeplatform-qt6 dex nm-connection-editor pavucontrol copyq wl-clipboard slurp grim gsfonts otf-font-awesome
   
   cp -r config/* ~/.config
   chmod -R +x ~/.config/sway/bin
