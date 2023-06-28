@@ -1,4 +1,4 @@
-# sway-sensible-defaults
+# sway-sensible-dotfiles
 
 A better default config for sway. Minimally riced and includes most basic to intermediate functionality such as:
 
