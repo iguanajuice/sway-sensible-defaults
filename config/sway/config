@@ -8,6 +8,10 @@ set $mod Mod4
 # Modifier key used to move and resize windows
 floating_modifier Mod1 normal
 
+# Change floating modifier
+bindsym Mod1+escape floating_modifier Mod1 normal
+bindsym Mod4+escape floating_modifier Mod4 normal
+
 # Colors (applies to notifications and app launcher)
 set $focus_fg ffffffff
 set $focus_bg 242424ff
