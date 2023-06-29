@@ -34,7 +34,7 @@
 	"clock": {
 		"format": "{:      %I:%M %p   %a %d %b}",
 		"on-click": "gnome-calendar",
-		"on-click-right": "gnome-weather"
+		"on-click-middle": "gnome-weather"
 	},
 	"custom/ss": {
 		"format": "",
