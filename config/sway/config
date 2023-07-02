@@ -225,8 +225,7 @@ bindgesture swipe:3:right exec ~/.config/sway/bin/sway-overfocus group-rw
 # Moving around -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 #
     # Move your focus around
-    bindsym Mod1+Tab exec ~/.config/sway/bin/i3-focus-last switch
-    bindsym Mod1+grave exec ~/.config/sway/bin/sway-overfocus group-rw
+    bindsym Mod1+tab exec ~/.config/sway/bin/sway-overfocus group-rw
     exec ~/.config/sway/bin/i3-focus-last server
 
     bindsym $mod+Left focus left
