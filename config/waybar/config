@@ -54,8 +54,9 @@
         "scroll-step": 5, // %, can be a float
         "format": " {volume}%",
         "format-muted": " MUTE",
-        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-left": "pavucontrol",
         "on-click-right": "pavucontrol",
+        "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false,
     },
 	"network": {
